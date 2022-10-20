@@ -98,7 +98,9 @@ ul {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    text-decoration: none
+    text-decoration: none;
+
+    transition: color 250ms var(--timing-function);
 }
 
 .site-nav .link:hover, 
@@ -111,6 +113,25 @@ ul {
 .site-nav .link.current {
     color: var(--accent-color);
 }
+
+.link {
+    display: block;
+    
+    position: relative;
+}
+
+.link.current::after {
+    content: '';
+    position: absolute;
+    bottom: -33px;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+}
+
 
 /* Contact header*/
 
@@ -139,7 +160,7 @@ ul {
 }
 
 .contact-link {
-    
+    transition: color 250ms var(--timing-function);
 }
 
 
@@ -192,6 +213,7 @@ ul {
     height: 100%;
 
     background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms var(--timing-function);
 }
 
 .backdrop.is-hidden {
@@ -340,6 +362,28 @@ ul {
     margin-left: 30px;
 }
 
+.ocupation-thumb {
+    position: relative;
+}
+
+.ocupation-overlay {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: rgba(47, 48, 58, 0.8);
+}
+
+.overlay-text {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--text-wight);
+}
+
 /* Comand */
 
 .section-comand {
@@ -408,6 +452,9 @@ ul {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+
+    transition: fill 250ms var(--timing-function);
+    transition: background-color 250ms var(--timing-function);
 }
 
 .net-link:hover {
@@ -450,10 +497,14 @@ ul {
     justify-content: center;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+
+    transition: border-color 250ms var(--timing-function);
 }
 
 .clients-icon {
     fill: #AFB1B8;
+
+    transition: fill 250ms var(--timing-function);
 }
 
 .clients-link:hover {

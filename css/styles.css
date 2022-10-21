@@ -453,7 +453,6 @@ ul {
     justify-content: center;
     border-radius: 50%;
 
-    transition: fill 250ms var(--timing-function);
     transition: background-color 250ms var(--timing-function);
 }
 
@@ -467,6 +466,9 @@ ul {
 
 .net-icon {
     fill: #AFB1B8;
+
+    transition: fill 250ms var(--timing-function);
+    
 }
 
 /* Clients */
@@ -551,6 +553,10 @@ ul {
 .contact-ft {    
     font-style: normal;
     
+}
+
+.contact-adr-link {
+    transition: color 250ms var(--timing-function);
 }
 
 .contact-ft .contact-adr-link {
@@ -687,11 +693,11 @@ ul {
     height: 100%;
     background-color: rgba(33, 150, 243, 0.9);
     padding: 63px 24px;
-    transform: translateY(100%);
+    transform: translateY(101%);
     transition: transform 250ms var(--timing-function);
 }
 
-.card:hover .descript-overlay {
+.examples-card:hover .descript-overlay {
     transform: translateY(0);
 }
 
